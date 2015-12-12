@@ -1,0 +1,60 @@
+﻿@using System.Globalization
+@model ELibrary.Models.ReviewsListViewModel
+
+@{
+	ViewBag.Title = "ELibrary - Reviews";
+	Layout =
+		(User.Identity.IsAuthenticated && ELibrary.Models.User.GetByEmail(User.Identity.Name).AccountType == ELibrary.Models.AccountType.Admin)
+		? "/Views/_AdminLayout.cshtml"
+		: "/Views/_BasicLayout.cshtml";
+}
+
+<body>
+	<div class="btn-group" style="margin-bottom: 15px;">
+		@Html.PageLinks(Model.PagingInfo, x => Url.Action("Reviews", new { page = x }))
+	</div>
+	@foreach (var r in Model.Reviews)
+	{
+		var user = ELibrary.Models.User.GetById(r.UserId);
+		<div class="well text-center">
+			<div style="min-height: 70px;">
+				<div style="display: inline-block; float: left;">
+					<h4>
+						<strong>
+							@string.Format("{0} {1} (email: {2})\nsaid:",
+								user.Name.ToCharArray()[0].ToString().ToUpper() + user.Name.Substring(1, user.Name.Length - 1).ToLower(),
+								user.Surname.ToCharArray()[0].ToString().ToUpper() + user.Surname.Substring(1, user.Surname.Length - 1).ToLower(),
+								user.Email)
+						</strong>
+					</h4>
+				</div>
+				<div class="pull-right label label-primary" style="display: inline-block; float: left; font-size: 15px;">
+					@string.Format("Date: {0}.{1}.{2}", r.DateStamp.Day, r.DateStamp.Month, r.DateStamp.Year)
+				</div>
+			</div>
+			<div class="review">
+				@string.Format("{0}", r.Text)
+			</div>
+			<div class="text-left">
+				<h4>
+					@string.Format("{0}'s mark: ", user.Name.ToCharArray()[0].ToString().ToUpper() + user.Name.Substring(1, user.Name.Length - 1).ToLower())
+					<span class="mark" style="color:
+					@r.GetMarkColor()
+					; font-weight: bold;">
+						@r.Mark
+					</span>
+				</h4>
+			</div>
+			@if (!string.IsNullOrEmpty(r.AdminReply))
+			{
+				<h5 class="text-left"><b>Reply:</b></h5>
+				<div class="review">
+					@string.Format("{0}", r.AdminReply)
+				</div>
+			}
+		</div>
+	}
+	<div class="btn-group">
+		@Html.PageLinks(Model.PagingInfo, x => Url.Action("Reviews", new { page = x }))
+	</div>
+</body>

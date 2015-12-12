@@ -1,0 +1,52 @@
+﻿@model List<ELibrary.Models.UserStatistics>
+
+<div class="panel panel-default">
+	<div class="panel-heading">
+		<h3>Users' statistics</h3>
+	</div>
+	<div class="panel-body">
+		<table class="table table-striped table-condensed table-bordered">
+			<tr>
+				<th rowspan="2" class="text-center">User</th>
+				@for (int i = 1; i <= 12; i++)
+				{
+					<th colspan="2" class="text-center">
+						@string.Format("{0}, {1}", new DateTime(DateTime.Now.Year, i, 1).ToString("MMMM"), DateTime.Now.Year)
+					</th>
+					}
+			</tr>
+			<tr>
+				@for (int i = 1; i <= 12; i++)
+				{
+					<th class="text-center">Purchases count</th>
+					<th class="text-center">Reviews count</th>
+					}
+			</tr>
+			@foreach (var item in Model)
+			{
+				<tr>
+					<td class="text-center">
+						<b>
+							@string.Format("{0} {1} (email: {2})",
+								item.User.Name.ToCharArray()[0].ToString().ToUpper() + item.User.Name.Substring(1, item.User.Name.Length - 1).ToLower(),
+								item.User.Surname.ToCharArray()[0].ToString().ToUpper() + item.User.Surname.Substring(1, item.User.Surname.Length - 1).ToLower(),
+								item.User.Email)
+							<br />
+						</b>
+						@string.Format("Account type: {0}", item.User.AccountType == ELibrary.Models.AccountType.Admin ? "Administrator" : (ELibrary.Models.User.IsPremiumPeriod(item.User.Id) ? "Premium" : "Regular"))
+					</td>
+					@for (int i = 1; i <= 12; i++)
+					{
+						<td class="text-left">
+							@item.MonthInfo[i].PurchasesCount
+						</td>
+						<td class="text-left">
+							@item.MonthInfo[i].ReviewsCount
+						</td>
+						}
+
+				</tr>
+				}
+		</table>
+	</div>
+</div>

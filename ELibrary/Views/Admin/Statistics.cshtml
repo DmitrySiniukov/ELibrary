@@ -1,0 +1,19 @@
+﻿@{
+	ViewBag.Title = "ELibrary - Statistics";
+	Layout = "/Views/_AdminLayout.cshtml";
+}
+
+<body>
+	<div class="panel panel-success" style="width: 2155px;">
+		<div class="panel-heading">
+			<h1>Statistics</h1>
+		</div>
+		<div class="userStatistics">
+			@Html.Partial("UserStatistics", ELibrary.Models.UserStatistics.GetAllStatistics())
+		</div>
+
+		<div class="bookStatistics">
+			@Html.Partial("BookStatistics", ELibrary.Models.BookStatistics.GetAllStatistics())
+		</div>
+	</div>
+</body>

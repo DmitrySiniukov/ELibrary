@@ -1,0 +1,19 @@
+﻿
+@{
+	ViewBag.Title = "ELibrary - 404";
+	Layout =
+		(User.Identity.IsAuthenticated && ELibrary.Models.User.GetByEmail(User.Identity.Name).AccountType == ELibrary.Models.AccountType.Admin)
+		? "/Views/_AdminLayout.cshtml"
+		: "/Views/_BasicLayout.cshtml";
+}
+
+<body>
+	<style type="text/css">
+		img {
+			margin-top: 60px;
+		}
+	</style>
+	<div class="text-center">
+		<img src="http://netdna.webdesignerdepot.com/uploads/404/404-12.jpg"/>
+	</div>
+</body>

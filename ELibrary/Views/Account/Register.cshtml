@@ -1,0 +1,59 @@
+﻿@model ELibrary.Models.User
+
+@{
+	ViewBag.Title = "ELibrary - Registration";
+	Layout = "/Views/_BasicLayout.cshtml";
+}
+
+<body>
+	<div class="">
+		<div class="panel panel-info">
+			<div class="panel-heading text-center">
+				<h4>
+					Registration
+				</h4>
+			</div>
+			<div class="panel-body">
+				@Html.ValidationSummary()
+				@using (Html.BeginForm("Register", "Account", FormMethod.Post, new { enctype = "multipart/form-data" }))
+				{
+					<div class="form-group">
+						<label>Name*:</label>
+						@Html.TextBoxFor(x => x.Name, new { @class = "form-control" })
+					</div>
+					<div class="form-group">
+						<label>Surname*:</label>
+						@Html.TextBoxFor(x => x.Surname, new { @class = "form-control" })
+					</div>
+					<div class="form-group">
+						<label>Email*:</label>
+						@Html.TextBoxFor(x => x.Email, new { @class = "form-control" })
+					</div>
+					<div class="form-group">
+						<label>Password*:</label>
+						@Html.PasswordFor(x => x.Password, new { @class = "form-control" })
+					</div>
+					<div class="form-group">
+						<label>Gender:</label>
+						@Html.DropDownListFor(x => x.Gender, new[]
+					{
+						new SelectListItem() { Text = "Male", Value = bool.FalseString },
+						new SelectListItem() { Text = "Female", Value = bool.TrueString }
+					}, new { @class = "form-control" })
+					</div>
+					<div class="form-group">
+						<label>Date of birth:</label>
+						@Html.TextBoxFor(x => x.DateOfBirth, new { @class = "form-control", type = "date" })
+					</div>
+					<div class="form-group">
+						<label style="width: 200px;">Profile picture url:</label>
+						@Html.TextBoxFor(x => x.ProfilePictureFile, new { type = "file" })
+					</div>
+					<div class="form-group text-center">
+						<input class="btn btn-primary" type="submit" value="Submit registration" />
+					</div>
+				}
+			</div>
+		</div>
+	</div>
+</body>

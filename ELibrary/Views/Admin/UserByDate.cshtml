@@ -1,0 +1,51 @@
+﻿@*@model List<ELibrary.Models.BookStatistics>
+
+<body>
+	<div class="panel panel-default">
+		<div class="panel-heading">
+			<h3>Book statistics</h3>
+		</div>
+		<div class="panel-body">
+			<table class="table table-striped table-condensed table-bordered">
+				<tr>
+					<th class="text-center">Image
+					</th>
+					<th class="text-center">Title
+					</th>
+					<th class="text-center">Author
+					</th>
+					<th class="text-center">Published
+					</th>
+					<th class="text-center">Purchase count
+					</th>
+				</tr>
+				@foreach (var item in Model)
+				{
+					<tr>
+						<td class="text-center">
+							<img height="70px" src="
+								@item.BookInstance.Image
+							"/>
+						</td>
+						<td class="text-center"><b>
+							@item.BookInstance.Title
+						</b>
+						</td>
+						<td class="text-center">
+							@item.BookInstance.Author
+						</td>
+						<td class="text-center">
+							@string.Format("{0}", item.BookInstance.Published ? "Yes" : "No")
+						</td>
+						
+						<td class="text-center">
+							<b>
+								@item.PurchaseCount
+							</b>
+						</td>
+					</tr>
+				}
+			</table>
+		</div>
+	</div>
+</body>*@

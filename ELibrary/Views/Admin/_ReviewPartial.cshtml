@@ -1,0 +1,47 @@
+﻿@model ELibrary.Models.Comment
+@using System.Globalization
+
+@using (Html.BeginForm("_ReviewPartial", "Admin"))
+{
+	<div class="well text-center">
+		<div style="min-height: 70px;">
+			<div style="display: inline-block; float: left;">
+				<h4>
+					<strong>
+						@string.Format("Review from: {0} {1}",
+								Model.Name.ToCharArray()[0].ToString(CultureInfo.InvariantCulture).ToUpper() + Model.Name.Substring(1, Model.Name.Length - 1),
+								Model.Surname.ToCharArray()[0].ToString(CultureInfo.InvariantCulture).ToUpper() + Model.Surname.Substring(1, Model.Surname.Length - 1))
+					</strong>
+				</h4>
+			</div>
+			<div class="pull-right label label-primary" style="display: inline-block; float: left; font-size: 15px;">
+				@string.Format("Date: {0}.{1}.{2} {3}:{4}:{5}", Model.DateStamp.Day, Model.DateStamp.Month, Model.DateStamp.Year, Model.DateStamp.Hour,
+								  Model.DateStamp.Minute, Model.DateStamp.Second)
+			</div>
+		</div>
+		<div class="form-group">
+			<label>Email:</label>
+			@Html.DisplayFor(modelItem => modelItem.Email)
+		</div>
+		<div class="form-group">
+			<label>Age:</label>
+			@Html.DisplayFor(modelItem => modelItem.Age)
+		</div>
+		<div class="review">
+			<div class="form-group">
+				<label>Ip:</label>
+				@Html.DisplayFor(modelItem => modelItem.Ip)
+			</div>
+			<div class="review">
+				@string.Format("{0}", Model.FeedbackText)
+			</div>
+			<div class="form-group">
+				<label>Reply:</label>
+				@Html.TextAreaFor(x => x.Reply, new { @class = "form-control feedback" })
+			</div>
+		</div>
+		<div class="text-center">
+			<input class="btn btn-primary" type="submit" value="Submit reply" />
+		</div>
+	</div>
+}

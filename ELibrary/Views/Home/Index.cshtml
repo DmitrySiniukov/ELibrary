@@ -1,0 +1,31 @@
+﻿@model List<ELibrary.Models.Book>
+
+@{
+	ViewBag.Title = "ELibrary - Home";
+	Layout =
+		(User != null && User.Identity.IsAuthenticated && ELibrary.Models.User.GetByEmail(User.Identity.Name).AccountType == ELibrary.Models.AccountType.Admin)
+		? "/Views/_AdminLayout.cshtml"
+		: "/Views/_BasicLayout.cshtml";
+}
+
+<body>
+	
+	@foreach (var b in Model) {
+		<div class="book-block">
+			<a href="
+			@string.Format("/Home/Book/{0}", b.Id)
+			" >
+				<div class="book-image"><img src="
+				@b.Image
+					" />
+				</div>
+			</a>
+			<a href="
+			@string.Format("/Home/Book/{0}", b.Id)
+			"><h4 style="width: 100%" class="text-center title-h">@b.Title</h4></a>
+			<p class="author-p text-center">( by
+				@b.Author
+			)</p>
+		</div>
+	}
+</body>

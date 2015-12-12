@@ -1,0 +1,20 @@
+﻿
+@{
+	ViewBag.Title = "ELibrary - Error";
+	Layout =
+		(User.Identity.IsAuthenticated && ELibrary.Models.User.GetByEmail(User.Identity.Name).AccountType == ELibrary.Models.AccountType.Admin)
+		? "/Views/_AdminLayout.cshtml"
+		: "/Views/_BasicLayout.cshtml";
+}
+
+<body>
+	<style type="text/css">
+		.info {
+			margin-top: 60px;
+		}
+	</style>
+	<div class="text-center info">
+        <h2>Ooops... An error occured, try again later.</h2>
+		<img src="http://raptorhosting.com/template2/img/access-error-logs.png"/>
+	</div>
+</body>

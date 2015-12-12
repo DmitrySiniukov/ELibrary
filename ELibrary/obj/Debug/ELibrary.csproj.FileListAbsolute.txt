@@ -1,0 +1,188 @@
+C:\Users\sinyukov\Documents\Visual Studio 2012\Projects\ELibrary\SmartSnake\bin\SmartSnake.dll
+C:\Users\sinyukov\Documents\Visual Studio 2012\Projects\ELibrary\SmartSnake\bin\SmartSnake.pdb
+C:\Users\sinyukov\Documents\Visual Studio 2012\Projects\ELibrary\SmartSnake\bin\Microsoft.Web.Infrastructure.dll
+C:\Users\sinyukov\Documents\Visual Studio 2012\Projects\ELibrary\SmartSnake\bin\System.Web.Helpers.dll
+C:\Users\sinyukov\Documents\Visual Studio 2012\Projects\ELibrary\SmartSnake\bin\System.Web.Mvc.dll
+C:\Users\sinyukov\Documents\Visual Studio 2012\Projects\ELibrary\SmartSnake\bin\System.Web.Razor.dll
+C:\Users\sinyukov\Documents\Visual Studio 2012\Projects\ELibrary\SmartSnake\bin\System.Web.Webpages.Deployment.dll
+C:\Users\sinyukov\Documents\Visual Studio 2012\Projects\ELibrary\SmartSnake\bin\System.Web.Webpages.dll
+C:\Users\sinyukov\Documents\Visual Studio 2012\Projects\ELibrary\SmartSnake\bin\System.Web.Webpages.Razor.dll
+C:\Users\sinyukov\Documents\Visual Studio 2012\Projects\ELibrary\SmartSnake\bin\System.Web.Razor.xml
+C:\Users\sinyukov\Documents\Visual Studio 2012\Projects\ELibrary\SmartSnake\bin\System.Web.Webpages.xml
+C:\Users\sinyukov\Documents\Visual Studio 2012\Projects\ELibrary\SmartSnake\bin\System.Web.Webpages.Deployment.xml
+C:\Users\sinyukov\Documents\Visual Studio 2012\Projects\ELibrary\SmartSnake\bin\System.Web.Webpages.Razor.xml
+C:\Users\sinyukov\Documents\Visual Studio 2012\Projects\ELibrary\SmartSnake\bin\System.Web.Helpers.xml
+C:\Users\sinyukov\Documents\Visual Studio 2012\Projects\ELibrary\SmartSnake\bin\System.Web.Mvc.xml
+C:\Users\sinyukov\Documents\Visual Studio 2012\Projects\ELibrary\SmartSnake\obj\Debug\ELibrary.csprojResolveAssemblyReference.cache
+C:\Users\sinyukov\Documents\Visual Studio 2012\Projects\ELibrary\SmartSnake\obj\Debug\SmartSnake.dll
+C:\Users\sinyukov\Documents\Visual Studio 2012\Projects\ELibrary\SmartSnake\obj\Debug\SmartSnake.pdb
+C:\Users\d1mas\Desktop\ELibrary\SmartSnake\bin\ELibrary.dll
+C:\Users\d1mas\Desktop\ELibrary\SmartSnake\bin\ELibrary.pdb
+C:\Users\d1mas\Desktop\ELibrary\SmartSnake\bin\Microsoft.AspNet.SignalR.Core.dll
+C:\Users\d1mas\Desktop\ELibrary\SmartSnake\bin\Microsoft.AspNet.SignalR.Owin.dll
+C:\Users\d1mas\Desktop\ELibrary\SmartSnake\bin\Microsoft.AspNet.SignalR.SystemWeb.dll
+C:\Users\d1mas\Desktop\ELibrary\SmartSnake\bin\Microsoft.Owin.Host.SystemWeb.dll
+C:\Users\d1mas\Desktop\ELibrary\SmartSnake\bin\Newtonsoft.Json.dll
+C:\Users\d1mas\Desktop\ELibrary\SmartSnake\bin\Owin.dll
+C:\Users\d1mas\Desktop\ELibrary\SmartSnake\bin\System.Net.Http.Formatting.dll
+C:\Users\d1mas\Desktop\ELibrary\SmartSnake\bin\System.Web.Helpers.dll
+C:\Users\d1mas\Desktop\ELibrary\SmartSnake\bin\System.Web.Http.dll
+C:\Users\d1mas\Desktop\ELibrary\SmartSnake\bin\System.Web.Http.WebHost.dll
+C:\Users\d1mas\Desktop\ELibrary\SmartSnake\bin\System.Web.Mvc.dll
+C:\Users\d1mas\Desktop\ELibrary\SmartSnake\bin\System.Web.Razor.dll
+C:\Users\d1mas\Desktop\ELibrary\SmartSnake\bin\System.Web.Webpages.Deployment.dll
+C:\Users\d1mas\Desktop\ELibrary\SmartSnake\bin\System.Web.Webpages.dll
+C:\Users\d1mas\Desktop\ELibrary\SmartSnake\bin\System.Web.Webpages.Razor.dll
+C:\Users\d1mas\Desktop\ELibrary\SmartSnake\bin\Microsoft.AspNet.SignalR.Core.xml
+C:\Users\d1mas\Desktop\ELibrary\SmartSnake\bin\Microsoft.AspNet.SignalR.Owin.xml
+C:\Users\d1mas\Desktop\ELibrary\SmartSnake\bin\Microsoft.AspNet.SignalR.SystemWeb.xml
+C:\Users\d1mas\Desktop\ELibrary\SmartSnake\bin\Microsoft.Owin.Host.SystemWeb.xml
+C:\Users\d1mas\Desktop\ELibrary\SmartSnake\bin\Newtonsoft.Json.xml
+C:\Users\d1mas\Desktop\ELibrary\SmartSnake\bin\System.Net.Http.Formatting.xml
+C:\Users\d1mas\Desktop\ELibrary\SmartSnake\bin\System.Web.Http.xml
+C:\Users\d1mas\Desktop\ELibrary\SmartSnake\bin\System.Web.Http.WebHost.xml
+C:\Users\d1mas\Desktop\ELibrary\SmartSnake\bin\System.Web.Razor.xml
+C:\Users\d1mas\Desktop\ELibrary\SmartSnake\bin\System.Web.Webpages.xml
+C:\Users\d1mas\Desktop\ELibrary\SmartSnake\bin\System.Web.Webpages.Deployment.xml
+C:\Users\d1mas\Desktop\ELibrary\SmartSnake\bin\System.Web.Webpages.Razor.xml
+C:\Users\d1mas\Desktop\ELibrary\SmartSnake\bin\System.Web.Helpers.xml
+C:\Users\d1mas\Desktop\ELibrary\SmartSnake\bin\System.Web.Mvc.xml
+C:\Users\d1mas\Desktop\ELibrary\SmartSnake\obj\Debug\ELibrary.csprojResolveAssemblyReference.cache
+C:\Users\d1mas\Desktop\ELibrary\SmartSnake\obj\Debug\ELibrary.dll
+C:\Users\d1mas\Desktop\ELibrary\SmartSnake\obj\Debug\ELibrary.pdb
+D:\University\ELibrary\SmartSnake\bin\ELibrary.dll
+D:\University\ELibrary\SmartSnake\bin\ELibrary.pdb
+D:\University\ELibrary\SmartSnake\bin\Microsoft.AspNet.SignalR.Core.dll
+D:\University\ELibrary\SmartSnake\bin\Microsoft.AspNet.SignalR.Owin.dll
+D:\University\ELibrary\SmartSnake\bin\Microsoft.AspNet.SignalR.SystemWeb.dll
+D:\University\ELibrary\SmartSnake\bin\Microsoft.Owin.Host.SystemWeb.dll
+D:\University\ELibrary\SmartSnake\bin\Newtonsoft.Json.dll
+D:\University\ELibrary\SmartSnake\bin\Owin.dll
+D:\University\ELibrary\SmartSnake\bin\System.Net.Http.Formatting.dll
+D:\University\ELibrary\SmartSnake\bin\System.Web.Helpers.dll
+D:\University\ELibrary\SmartSnake\bin\System.Web.Http.dll
+D:\University\ELibrary\SmartSnake\bin\System.Web.Http.WebHost.dll
+D:\University\ELibrary\SmartSnake\bin\System.Web.Mvc.dll
+D:\University\ELibrary\SmartSnake\bin\System.Web.Razor.dll
+D:\University\ELibrary\SmartSnake\bin\System.Web.Webpages.Deployment.dll
+D:\University\ELibrary\SmartSnake\bin\System.Web.Webpages.dll
+D:\University\ELibrary\SmartSnake\bin\System.Web.Webpages.Razor.dll
+D:\University\ELibrary\SmartSnake\bin\Microsoft.AspNet.SignalR.Core.xml
+D:\University\ELibrary\SmartSnake\bin\Microsoft.AspNet.SignalR.Owin.xml
+D:\University\ELibrary\SmartSnake\bin\Microsoft.AspNet.SignalR.SystemWeb.xml
+D:\University\ELibrary\SmartSnake\bin\Microsoft.Owin.Host.SystemWeb.xml
+D:\University\ELibrary\SmartSnake\bin\Newtonsoft.Json.xml
+D:\University\ELibrary\SmartSnake\bin\System.Net.Http.Formatting.xml
+D:\University\ELibrary\SmartSnake\bin\System.Web.Http.xml
+D:\University\ELibrary\SmartSnake\bin\System.Web.Http.WebHost.xml
+D:\University\ELibrary\SmartSnake\bin\System.Web.Razor.xml
+D:\University\ELibrary\SmartSnake\bin\System.Web.Webpages.xml
+D:\University\ELibrary\SmartSnake\bin\System.Web.Webpages.Deployment.xml
+D:\University\ELibrary\SmartSnake\bin\System.Web.Webpages.Razor.xml
+D:\University\ELibrary\SmartSnake\bin\System.Web.Helpers.xml
+D:\University\ELibrary\SmartSnake\bin\System.Web.Mvc.xml
+D:\University\ELibrary\SmartSnake\obj\Debug\ELibrary.dll
+D:\University\ELibrary\SmartSnake\obj\Debug\ELibrary.pdb
+D:\University\ELibrary\SmartSnake\obj\Debug\ELibrary.csprojResolveAssemblyReference.cache
+D:\University\ELibraryDB\SmartSnake\bin\ELibrary.dll
+D:\University\ELibraryDB\SmartSnake\bin\ELibrary.pdb
+D:\University\ELibraryDB\SmartSnake\bin\Microsoft.AspNet.SignalR.Core.dll
+D:\University\ELibraryDB\SmartSnake\bin\Microsoft.AspNet.SignalR.Owin.dll
+D:\University\ELibraryDB\SmartSnake\bin\Microsoft.AspNet.SignalR.SystemWeb.dll
+D:\University\ELibraryDB\SmartSnake\bin\Microsoft.Owin.Host.SystemWeb.dll
+D:\University\ELibraryDB\SmartSnake\bin\Newtonsoft.Json.dll
+D:\University\ELibraryDB\SmartSnake\bin\Owin.dll
+D:\University\ELibraryDB\SmartSnake\bin\System.Net.Http.Formatting.dll
+D:\University\ELibraryDB\SmartSnake\bin\System.Web.Helpers.dll
+D:\University\ELibraryDB\SmartSnake\bin\System.Web.Http.dll
+D:\University\ELibraryDB\SmartSnake\bin\System.Web.Http.WebHost.dll
+D:\University\ELibraryDB\SmartSnake\bin\System.Web.Mvc.dll
+D:\University\ELibraryDB\SmartSnake\bin\System.Web.Razor.dll
+D:\University\ELibraryDB\SmartSnake\bin\System.Web.Webpages.Deployment.dll
+D:\University\ELibraryDB\SmartSnake\bin\System.Web.Webpages.dll
+D:\University\ELibraryDB\SmartSnake\bin\System.Web.Webpages.Razor.dll
+D:\University\ELibraryDB\SmartSnake\bin\Microsoft.AspNet.SignalR.Core.xml
+D:\University\ELibraryDB\SmartSnake\bin\Microsoft.AspNet.SignalR.Owin.xml
+D:\University\ELibraryDB\SmartSnake\bin\Microsoft.AspNet.SignalR.SystemWeb.xml
+D:\University\ELibraryDB\SmartSnake\bin\Microsoft.Owin.Host.SystemWeb.xml
+D:\University\ELibraryDB\SmartSnake\bin\Newtonsoft.Json.xml
+D:\University\ELibraryDB\SmartSnake\bin\System.Net.Http.Formatting.xml
+D:\University\ELibraryDB\SmartSnake\bin\System.Web.Http.xml
+D:\University\ELibraryDB\SmartSnake\bin\System.Web.Http.WebHost.xml
+D:\University\ELibraryDB\SmartSnake\bin\System.Web.Razor.xml
+D:\University\ELibraryDB\SmartSnake\bin\System.Web.Webpages.xml
+D:\University\ELibraryDB\SmartSnake\bin\System.Web.Webpages.Deployment.xml
+D:\University\ELibraryDB\SmartSnake\bin\System.Web.Webpages.Razor.xml
+D:\University\ELibraryDB\SmartSnake\bin\System.Web.Helpers.xml
+D:\University\ELibraryDB\SmartSnake\bin\System.Web.Mvc.xml
+D:\University\ELibraryDB\SmartSnake\obj\Debug\ELibrary.csprojResolveAssemblyReference.cache
+D:\University\ELibraryDB\SmartSnake\obj\Debug\ELibrary.dll
+D:\University\ELibraryDB\SmartSnake\obj\Debug\ELibrary.pdb
+C:\Users\d1mas\Desktop\ELibrary\ELibrary\bin\ELibrary.dll
+C:\Users\d1mas\Desktop\ELibrary\ELibrary\bin\ELibrary.pdb
+C:\Users\d1mas\Desktop\ELibrary\ELibrary\bin\Microsoft.AspNet.SignalR.Core.dll
+C:\Users\d1mas\Desktop\ELibrary\ELibrary\bin\Microsoft.AspNet.SignalR.Owin.dll
+C:\Users\d1mas\Desktop\ELibrary\ELibrary\bin\Microsoft.AspNet.SignalR.SystemWeb.dll
+C:\Users\d1mas\Desktop\ELibrary\ELibrary\bin\Microsoft.Owin.Host.SystemWeb.dll
+C:\Users\d1mas\Desktop\ELibrary\ELibrary\bin\Newtonsoft.Json.dll
+C:\Users\d1mas\Desktop\ELibrary\ELibrary\bin\Owin.dll
+C:\Users\d1mas\Desktop\ELibrary\ELibrary\bin\System.Net.Http.Formatting.dll
+C:\Users\d1mas\Desktop\ELibrary\ELibrary\bin\System.Web.Helpers.dll
+C:\Users\d1mas\Desktop\ELibrary\ELibrary\bin\System.Web.Http.dll
+C:\Users\d1mas\Desktop\ELibrary\ELibrary\bin\System.Web.Http.WebHost.dll
+C:\Users\d1mas\Desktop\ELibrary\ELibrary\bin\System.Web.Mvc.dll
+C:\Users\d1mas\Desktop\ELibrary\ELibrary\bin\System.Web.Razor.dll
+C:\Users\d1mas\Desktop\ELibrary\ELibrary\bin\System.Web.Webpages.Deployment.dll
+C:\Users\d1mas\Desktop\ELibrary\ELibrary\bin\System.Web.Webpages.dll
+C:\Users\d1mas\Desktop\ELibrary\ELibrary\bin\System.Web.Webpages.Razor.dll
+C:\Users\d1mas\Desktop\ELibrary\ELibrary\bin\Microsoft.AspNet.SignalR.Core.xml
+C:\Users\d1mas\Desktop\ELibrary\ELibrary\bin\Microsoft.AspNet.SignalR.Owin.xml
+C:\Users\d1mas\Desktop\ELibrary\ELibrary\bin\Microsoft.AspNet.SignalR.SystemWeb.xml
+C:\Users\d1mas\Desktop\ELibrary\ELibrary\bin\Microsoft.Owin.Host.SystemWeb.xml
+C:\Users\d1mas\Desktop\ELibrary\ELibrary\bin\Newtonsoft.Json.xml
+C:\Users\d1mas\Desktop\ELibrary\ELibrary\bin\System.Net.Http.Formatting.xml
+C:\Users\d1mas\Desktop\ELibrary\ELibrary\bin\System.Web.Http.xml
+C:\Users\d1mas\Desktop\ELibrary\ELibrary\bin\System.Web.Http.WebHost.xml
+C:\Users\d1mas\Desktop\ELibrary\ELibrary\bin\System.Web.Razor.xml
+C:\Users\d1mas\Desktop\ELibrary\ELibrary\bin\System.Web.Webpages.xml
+C:\Users\d1mas\Desktop\ELibrary\ELibrary\bin\System.Web.Webpages.Deployment.xml
+C:\Users\d1mas\Desktop\ELibrary\ELibrary\bin\System.Web.Webpages.Razor.xml
+C:\Users\d1mas\Desktop\ELibrary\ELibrary\bin\System.Web.Helpers.xml
+C:\Users\d1mas\Desktop\ELibrary\ELibrary\bin\System.Web.Mvc.xml
+C:\Users\d1mas\Desktop\ELibrary\ELibrary\obj\Debug\ELibrary.dll
+C:\Users\d1mas\Desktop\ELibrary\ELibrary\obj\Debug\ELibrary.pdb
+C:\Users\d1mas\Desktop\ELibrary\ELibrary\obj\Debug\ELibrary.csprojResolveAssemblyReference.cache
+D:\ELibrary\ELibrary\bin\ELibrary.dll
+D:\ELibrary\ELibrary\bin\ELibrary.pdb
+D:\ELibrary\ELibrary\bin\Microsoft.AspNet.SignalR.Core.dll
+D:\ELibrary\ELibrary\bin\Microsoft.AspNet.SignalR.Owin.dll
+D:\ELibrary\ELibrary\bin\Microsoft.AspNet.SignalR.SystemWeb.dll
+D:\ELibrary\ELibrary\bin\Microsoft.Owin.Host.SystemWeb.dll
+D:\ELibrary\ELibrary\bin\Newtonsoft.Json.dll
+D:\ELibrary\ELibrary\bin\Owin.dll
+D:\ELibrary\ELibrary\bin\System.Net.Http.Formatting.dll
+D:\ELibrary\ELibrary\bin\System.Web.Helpers.dll
+D:\ELibrary\ELibrary\bin\System.Web.Http.dll
+D:\ELibrary\ELibrary\bin\System.Web.Http.WebHost.dll
+D:\ELibrary\ELibrary\bin\System.Web.Mvc.dll
+D:\ELibrary\ELibrary\bin\System.Web.Razor.dll
+D:\ELibrary\ELibrary\bin\System.Web.Webpages.Deployment.dll
+D:\ELibrary\ELibrary\bin\System.Web.Webpages.dll
+D:\ELibrary\ELibrary\bin\System.Web.Webpages.Razor.dll
+D:\ELibrary\ELibrary\bin\Microsoft.AspNet.SignalR.Core.xml
+D:\ELibrary\ELibrary\bin\Microsoft.AspNet.SignalR.Owin.xml
+D:\ELibrary\ELibrary\bin\Microsoft.AspNet.SignalR.SystemWeb.xml
+D:\ELibrary\ELibrary\bin\Microsoft.Owin.Host.SystemWeb.xml
+D:\ELibrary\ELibrary\bin\Newtonsoft.Json.xml
+D:\ELibrary\ELibrary\bin\System.Net.Http.Formatting.xml
+D:\ELibrary\ELibrary\bin\System.Web.Http.xml
+D:\ELibrary\ELibrary\bin\System.Web.Http.WebHost.xml
+D:\ELibrary\ELibrary\bin\System.Web.Razor.xml
+D:\ELibrary\ELibrary\bin\System.Web.Webpages.xml
+D:\ELibrary\ELibrary\bin\System.Web.Webpages.Deployment.xml
+D:\ELibrary\ELibrary\bin\System.Web.Webpages.Razor.xml
+D:\ELibrary\ELibrary\bin\System.Web.Helpers.xml
+D:\ELibrary\ELibrary\bin\System.Web.Mvc.xml
+D:\ELibrary\ELibrary\obj\Debug\ELibrary.csprojResolveAssemblyReference.cache
+D:\ELibrary\ELibrary\obj\Debug\ELibrary.dll
+D:\ELibrary\ELibrary\obj\Debug\ELibrary.pdb

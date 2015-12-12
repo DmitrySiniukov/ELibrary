@@ -1,0 +1,30 @@
+﻿@model ELibrary.Models.PremiumPeriod
+@{
+	ViewBag.Title = "User: Get premium";
+	Layout = "/Views/_BasicLayout.cshtml";
+}
+
+<div class="panel panel-info">
+	<div class="panel-heading text-center">
+		<h4>
+			Purchase premium period
+		</h4>
+	</div>
+	<div class="panel-body">
+		@using (Html.BeginForm())
+		{
+			@Html.ValidationSummary()
+			<div class="form-group">
+				<label>Start date:</label>
+				@Html.TextBoxFor(x => x.DateFrom, new { @class = "form-control", type = "date" })
+			</div>
+			<div class="form-group">
+				<label>Date to:</label>
+				@Html.TextBoxFor(x => x.DateTo, new { @class = "form-control", type = "date" })
+			</div>
+			<div class="form-group">
+				<input class="btn btn-success" type="submit" value="Submit premium period" />
+			</div>
+		}
+	</div>
+</div>

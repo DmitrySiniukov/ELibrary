@@ -1,0 +1,57 @@
+﻿@model ELibrary.Models.Book
+
+@{
+	ViewBag.Title = "ELibrary - Book";
+	Layout =
+		(User.Identity.IsAuthenticated && ELibrary.Models.User.GetByEmail(User.Identity.Name).AccountType == ELibrary.Models.AccountType.Admin)
+		? "/Views/_AdminLayout.cshtml"
+		: "/Views/_BasicLayout.cshtml";
+}
+
+<body>
+	<div>
+		<h1>
+			@Model.Title
+		</h1>
+		<h2>( by 
+			@Model.Author
+			)
+		</h2>
+		<div style="text-align: center; margin: 30px;">
+			<img src="
+			@Model.Image
+		"/>
+		</div>
+		@Html.Raw(Model.Description)
+		<div class="bookButtons text-center">
+			@if (ViewBag.Access)
+			{
+				<a href="@Model.ContentUrl" target="_blank">
+					<input class="btn btn-primary important-button" type="button" value="Read" />
+				</a>
+				<a href="@string.Format("/Home/AddReview/{0}", Model.Id)">
+					<input class="btn btn-primary important-button" type="button" value="Add review" />
+				</a>
+			}
+			else
+			{
+				<a href="@string.Format("/Home/Purchase/{0}", Model.Id)">
+					<input class="btn btn-success important-button" type="button" value="Purchase" />
+				</a>
+			}
+		</div>
+		@{ var reviews = ELibrary.Models.Review.GetByBookId(Model.Id); }
+		@if (reviews.Count > 0)
+		{
+			<div class="panel panel-info" style="margin: 30px;">
+				<div class="panel-heading text-center">
+					<h3>Reviews:</h3>
+				</div>
+				@foreach (var r in reviews)
+				{
+					Html.RenderPartial("ReviewPartial", r);
+				}
+			</div>
+		}
+	</div>
+</body>

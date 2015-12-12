@@ -1,0 +1,46 @@
+﻿@model ELibrary.Models.Comment
+
+@{
+	ViewBag.Title = "ELibrary - Recall";
+	Layout =
+		(User.Identity.IsAuthenticated && ELibrary.Models.User.GetByEmail(User.Identity.Name).AccountType == ELibrary.Models.AccountType.Admin)
+		? "/Views/_AdminLayout.cshtml"
+		: "/Views/_BasicLayout.cshtml";
+}
+
+<body>
+	<div>
+		<div class="panel panel-info">
+			<div class="panel-heading text-center">
+				<h4>Recall</h4>
+			</div>
+			<div class="panel-body">
+				@Html.ValidationSummary()
+				@using (Html.BeginForm())
+				{
+					<h2 class="text-center">
+						@string.Format("Hello, {0}, please leave your comment", ELibrary.Models.User.GetByEmail(User.Identity.Name).Name)
+					</h2>
+					<div class="form-group">
+						<label>Comment:</label>
+						@Html.TextAreaFor(x => x.Text, new { @class = "form-control feedback" })
+					</div>
+					<div class="form-group">
+						<label>Mark:</label>
+						@Html.DropDownListFor(x => x.Mark, new[]
+						{
+							new SelectListItem() { Text = "1", Value = "1" },
+							new SelectListItem() { Text = "2", Value = "2" },
+							new SelectListItem() { Text = "3", Value = "3" },
+							new SelectListItem() { Text = "4", Value = "4" },
+							new SelectListItem() { Text = "5", Value = "5" }
+						}, new { @class = "form-control" })
+					</div>
+					<div class="form-group text-center">
+						<input class="btn btn-primary" type="submit" value="Submit comment" />
+					</div>
+				}
+			</div>
+		</div>
+	</div>
+</body>

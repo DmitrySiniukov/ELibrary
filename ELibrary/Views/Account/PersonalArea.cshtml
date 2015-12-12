@@ -1,0 +1,98 @@
+﻿@model ELibrary.Models.User
+
+@{
+	ViewBag.Title = "ELibrary - Personal area";
+	Layout =
+		(User.Identity.IsAuthenticated && ELibrary.Models.User.GetByEmail(User.Identity.Name).AccountType == ELibrary.Models.AccountType.Admin)
+		? "/Views/_AdminLayout.cshtml"
+		: "/Views/_BasicLayout.cshtml";
+}
+
+<body>
+	<div class="panel panel-info">
+		<h1 class="panel-heading text-center" style="margin-top: 0;">Personal area
+		</h1>
+		<div class="form-group">
+			<h3>Change personal information
+			</h3>
+		</div>
+		<div class="panel-body">
+			@Html.ValidationSummary()
+			@using (Html.BeginForm("PersonalArea", "Account", FormMethod.Post, new { enctype = "multipart/form-data" }))
+			{
+				@Html.HiddenFor(x => x.Id)
+				@Html.HiddenFor(x => x.Password)
+				@Html.HiddenFor(x => x.DateOfBirth)
+				@Html.HiddenFor(x => x.ProfilePicturePath)
+				<div class="text-center" style="margin-top: 10px;">
+					<img src="@ViewBag.ImageUrl" height="207" id="profileImage"/>
+				</div>
+				<div class="form-group text-center upload">
+					@Html.TextBoxFor(x => x.ProfilePictureFile, new { type = "file", @name = "Change profile picture", @id = "fileUploader" })
+				</div>
+				<div class="form-group">
+					<label>Name*:</label>
+					@Html.TextBoxFor(x => x.Name, new { @class = "form-control" })
+				</div>
+				<div class="form-group">
+					<label>Surname*:</label>
+					@Html.TextBoxFor(x => x.Surname, new { @class = "form-control" })
+				</div>
+				<div class="form-group">
+					<label>Email*:</label>
+					@Html.TextBoxFor(x => x.Email, new { @class = "form-control" })
+				</div>
+				<div class="form-group">
+					<label>Gender:</label>
+					@Html.DropDownListFor(x => x.Gender, new[]
+					{
+						new SelectListItem() { Text = "Male", Value = bool.FalseString },
+						new SelectListItem() { Text = "Female", Value = bool.TrueString }
+					}, new { @class = "form-control" })
+				</div>
+				<div class="form-group text-center">
+					<input class="btn btn-primary" type="submit" value="Submit changes" />
+				</div>
+			}
+		</div>
+
+		@if (!ELibrary.Models.User.IsPremiumPeriod(Model.Id))
+		{
+			<div class="text-center" style="margin: 30px;">
+				<a href="/Account/PremiumPeriod">
+					<input class="btn btn-success" type="button" value="Get premium account" />
+				</a>
+			</div>
+		}
+		else
+		{
+			<div class="panel-heading text-center">
+				<h4 style="color: #00ff21">Premium period is purchased! You can use all the ELibrary! :)
+				</h4>
+			</div>
+		}
+
+		@Html.Partial("UserInformation", ELibrary.Models.Book.GetAccessibleBooks(Model))
+
+		<script>
+			function handleFileSelect(evt) {
+				var files = evt.target.files;
+				for (var i = 0, f; f = files[i]; i++) {
+					if (!f.type.match('image.*')) {
+						document.getElementById('profileImage').src = '/Content/Images/errorImage.jpg';
+						continue;
+					}
+					var reader = new FileReader();
+					reader.onload = (function (theFile) {
+						return function (e) {
+							document.getElementById('profileImage').src = e.target.result;
+						};
+					})(f);
+					reader.readAsDataURL(f);
+				}
+			}
+
+			document.getElementById('fileUploader').addEventListener('change', handleFileSelect, false);
+		</script>
+	</div>
+</body>

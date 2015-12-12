@@ -1,0 +1,58 @@
+﻿@{
+    Layout = null;
+}
+
+<!DOCTYPE html>
+
+<html>
+<head>
+    <meta name="viewport" content="width=device-width" />
+	<title>
+		@ViewBag.Title
+	</title>
+	<link href="~/Content/bootstrap.css" rel="stylesheet" />
+	<link href="~/Content/bootstrap-theme.css" rel="stylesheet" />
+	<link type="text/css" rel="stylesheet" href="~/Content/Styles.css" />
+	<script type="text/javascript" src="http://ajax.googleapis.com/ajax/libs/jquery/1.10.2/jquery.js"></script>
+	<script type="text/javascript" src="http://ajax.googleapis.com/ajax/libs/jquery/1.10.2/jquery.min.js"></script>
+	<script src="~/Scripts/MainScript.js"></script>
+</head>
+<body onload="init()">
+	<header id="header">
+		<div class="buttons">
+			<a href="/Home">
+				<input class="btn btn-primary important-button" type="button" value="Home" />
+			</a>
+			<a href="/Admin/Reviews">
+				<input class="btn btn-primary important-button" type="button" value="Edit reviews" />
+			</a>
+			<a href="/Admin">
+				<input class="btn btn-primary important-button" type="button" value="Edit content" />
+			</a>
+		</div>
+		<div class="main-header">
+			<h1>Administration</h1>
+		</div>
+		<div class="login-panel text-left">
+			@if (User.Identity.IsAuthenticated)
+			{
+				<a href="/Admin/Statistics" class="btn admin-btn">@string.Format("{0}...", User.Identity.Name.Substring(0, 6))</a>
+				<a href="/Account/SignOut" class="btn">Sign out</a>
+			}
+		</div>
+	</header>
+    <div class="content">
+		@if (TempData["message"] != null) {
+			<div class="alert alert-success">@TempData["message"]</div>
+		}
+        @RenderBody()
+    </div>
+	<footer class="footer text-center" style="height: 50px; margin-top: 20px;">
+		<div class="footer-info" style="height: 50px;">
+			<h5>
+				<strong>Administration</strong>
+			</h5>	
+		</div>
+	</footer>
+</body>
+</html>

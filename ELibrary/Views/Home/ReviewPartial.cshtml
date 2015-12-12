@@ -1,0 +1,61 @@
+﻿@using System.Globalization;
+@model ELibrary.Models.Review
+
+<body class="text-center">
+	@{
+		var user = ELibrary.Models.User.GetById(Model.UserId);
+		var picturePath = string.IsNullOrEmpty(user.ProfilePicturePath) ? ((bool)user.Gender ? "/Content/Images/female.jpg" : "/Content/Images/male.jpg") : user.ProfilePicturePath;
+	}
+	<div class="reviewPartial">
+		<table class="reviewTable">
+			<tr>
+				<td style="width: 20%;">
+					<div class="reviewPhoto">
+						<img src="@picturePath" height="207" />
+					</div>
+				</td>
+				<td style="width: 80%;">
+					<div style="float: left; padding-left: 20px; width: 100%;">
+						@Html.HiddenFor(x => x.Id)
+						<div style="min-height: 70px;">
+							<div style="display: inline-block; float: left;">
+								<h4>
+									<strong>
+										@string.Format("{0}'s review:", user.Name.ToCharArray()[0].ToString().ToUpper() + user.Name.Substring(1, user.Name.Length - 1).ToLower())
+									</strong>
+								</h4>
+							</div>
+							<div class="pull-right label label-primary" style="display: inline-block; float: left; font-size: 15px;">
+								@string.Format("Date: {0}/{1}/{2} Time: {3,8:t}", Model.DateStamp.Day, Model.DateStamp.Month, Model.DateStamp.Year, Model.DateStamp)
+							</div>
+						</div>
+						<h5 class="text-left">
+							<b>Review:</b>
+						</h5>
+						<div class="review">
+							@string.Format("{0}", Model.Text)
+						</div>
+						<div class="text-left">
+							<h4>
+								@string.Format("{0}'s mark: ", user.Name.ToCharArray()[0].ToString().ToUpper() + user.Name.Substring(1, user.Name.Length - 1).ToLower())
+								<span class="mark" style="color:
+					@Model.GetMarkColor()
+					; font-weight: bold;">
+									@Model.Mark
+								</span>
+							</h4>
+						</div>
+					</div>
+				</td>
+			</tr>
+		</table>
+		@if (User.Identity.IsAuthenticated && ELibrary.Models.User.GetByEmail(User.Identity.Name).AccountType == ELibrary.Models.AccountType.Admin)
+		{
+			<div class="text-center" style="margin: 20px;">
+				<a href="@string.Format("/Admin/DeleteReview/{0}", Model.Id)">
+					<input class="btn btn-danger important-button" type="button" value="Delete review" />
+				</a>
+			</div>
+		}
+	</div>
+</body>

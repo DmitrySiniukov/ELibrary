@@ -1,0 +1,58 @@
+﻿@model ELibrary.Models.Book
+@{
+	ViewBag.Title = "Book purchasing";
+	Layout = "/Views/_BasicLayout.cshtml";
+}
+
+<script>
+	function onChange() {
+		var elem = $("#purchase-sum");
+		var sum = elem.val();
+		if (isNaN(parseFloat(sum)) || parseFloat(sum) < 10.0) {
+			elem.addClass("input-validation-error");
+		}
+		else {
+			elem.removeClass("input-validation-error");
+		}
+	}
+</script>
+<div class="panel panel-info">
+	<div class="panel-heading text-center">
+		<h4>Purchase book
+		</h4>
+	</div>
+	<div class="panel-body">
+		@if (TempData["message"] != null)
+		{
+			<h3 class="text-center alert alert-error field-validation-error">@TempData["message"]</h3>
+		}
+		<div class="form-group">
+			<h2>
+				@Model.Title
+			</h2>
+			<h3>( by 
+			@Model.Author
+				)
+			</h3>
+			<div style="text-align: center; margin: 30px;">
+				<img src="
+			@Model.Image
+		"/>
+			</div>
+			<div class="form-group">
+				<h3>Prise: 10$</h3>
+			</div>
+			@using (Html.BeginForm("Purchase", "Home", FormMethod.Post))
+			{
+				@Html.Hidden("Id", Model.Id)
+				<div class="form-group">
+					<label>Input value($):</label>
+					@Html.TextBox("Sum", "", new { @class = "form-control", @id = "purchase-sum", @onchange = "onChange()" })
+				</div>
+				<div class="form-group text-center">
+					<input class="btn btn-success" type="submit" value="Submit purchase" />
+				</div>
+			}
+		</div>
+	</div>
+</div>

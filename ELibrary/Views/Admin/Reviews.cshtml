@@ -1,0 +1,13 @@
+﻿@model IEnumerable<ELibrary.Models.Comment>
+@{
+	ViewBag.Title = "ELibrary - Reviews editing";
+	Layout = "/Views/_AdminLayout.cshtml";
+}
+
+<body>
+	@using (Html.BeginForm("Reviews", "Admin", FormMethod.Post))
+	{
+		<input class="btn btn-primary" style="margin-bottom: 10px;" type="submit" value="Submit all replies" />
+		@Html.EditorForModel()
+	}
+</body>

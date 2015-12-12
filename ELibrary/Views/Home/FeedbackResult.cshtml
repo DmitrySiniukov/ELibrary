@@ -1,0 +1,19 @@
+﻿@{
+	ViewBag.Title = "ELibrary - Result";
+	Layout =
+		(User.Identity.IsAuthenticated && ELibrary.Models.User.GetByEmail(User.Identity.Name).AccountType == ELibrary.Models.AccountType.Admin)
+		? "/Views/_AdminLayout.cshtml"
+		: "/Views/_BasicLayout.cshtml";
+}
+
+
+<body>
+	<div class="text-center">
+		<h1>
+			@ViewBag.Message
+		</h1>
+		<a href="/Home">
+			<input class="btn btn-primary important-button" type="button" value="Home" />
+		</a>
+	</div>
+</body>

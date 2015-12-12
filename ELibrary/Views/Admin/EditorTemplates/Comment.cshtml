@@ -1,0 +1,49 @@
+﻿@using System.Globalization;
+@model ELibrary.Models.Comment
+
+<body>
+	@{var user = ELibrary.Models.User.GetById(Model.UserId);}
+	<div class="well text-center">
+		@Html.HiddenFor(m => m.Id)
+		<div style="min-height: 70px;">
+			<div style="display: inline-block; float: left;">
+				<h4>
+					<strong>
+						@string.Format("User's name: {0} {1}",
+								user.Name.ToCharArray()[0].ToString().ToUpper() + user.Name.Substring(1, user.Name.Length - 1).ToLower(),
+								user.Surname.ToCharArray()[0].ToString().ToUpper() + user.Surname.Substring(1, user.Surname.Length - 1).ToLower())
+					</strong>
+				</h4>
+			</div>
+			<div class="pull-right label label-primary" style="display: inline-block; float: left; font-size: 15px;">
+				@string.Format("Date: {0}/{1}/{2} Time: {3,8:t}", Model.DateStamp.Day, Model.DateStamp.Month, Model.DateStamp.Year, Model.DateStamp)
+			</div>
+		</div>
+		<h5 class="text-left">
+			<b>User's email:</b>
+		</h5>
+		<div class="review">
+			@string.Format("{0}", user.Email)
+		</div>
+		<h5 class="text-left">
+			<b>Review:</b>
+		</h5>
+		<div class="review">
+			@string.Format("{0}", Model.Text)
+		</div>
+		<div class="text-left">
+				<h4>
+					@string.Format("{0}'s mark: ", user.Name.ToCharArray()[0].ToString().ToUpper() + user.Name.Substring(1, user.Name.Length - 1).ToLower())
+					<span class="mark" style="color:
+					@Model.GetMarkColor()
+					; font-weight: bold;">
+						@Model.Mark
+					</span>
+				</h4>
+			</div>
+		<h5 class="text-left">
+			<b>Reply:</b>
+		</h5>
+		@Html.TextAreaFor(x => x.AdminReply, new { @class = "review" })
+	</div>
+</body>

@@ -1,0 +1,66 @@
+﻿@model ELibrary.Models.Book
+@using ELibrary.Models
+@{
+	ViewBag.Title = "ELibrary - Edit";
+	Layout = "/Views/_AdminLayout.cshtml";
+}
+
+<div class="panel">
+	<div class="panel panel-info">
+		<div class="panel-heading text-center">
+			<h4>
+				@if (string.IsNullOrEmpty(Model.Title))
+				{
+					<span>Create new book</span>
+				}
+				else
+				{
+					<span>Edit @Model.Title</span>
+				}
+			</h4>
+		</div>
+		<div class="panel-body">
+			@Html.ValidationSummary()
+			@using (Html.BeginForm("Edit", "Admin"))
+			{
+				@Html.HiddenFor(m => m.Id)
+				<div class="form-group">
+					<label>Title*:</label>
+					@Html.TextBoxFor(x => x.Title, new { @class = "form-control" })
+				</div>
+				<div class="form-group">
+					<label>Description*:</label>
+					@Html.TextAreaFor(x => x.Description, new { @class = "form-control", @style = "max-width: 800px;", rows = 10 })
+				</div>
+				<div class="form-group">
+					<label>Author*:</label>
+					@Html.TextBoxFor(x => x.Author, new { @class = "form-control" })
+				</div>
+				<div class="form-group">
+					<label>Image url*:</label>
+					@Html.TextBoxFor(x => x.Image, new { @class = "form-control" })
+				</div>
+				<div class="form-group">
+					<label>Content url*:</label>
+					@Html.TextBoxFor(x => x.ContentUrl, new { @class = "form-control" })
+				</div>
+				<div class="form-group">
+					<label>Status:</label>
+					@Html.DropDownListFor(x => x.Published, new[]
+					{
+						new SelectListItem() { Text = "Published", Value = bool.TrueString },
+						new SelectListItem() { Text = "Not published", Value = bool.FalseString }
+					}, new { @class = "form-control" })
+				</div>
+				<div class="form-group">
+					<label>Accessibility:</label>
+					@Html.DropDownListFor(x => x.MinAccountType, EnumHelper.GetSelectList(typeof(Book.BookAccountType)), new { @class = "form-control" })
+				</div>
+				<div class="panel-footer text-center">
+					<input type="submit" value="Save" class="btn btn-primary" />
+					@Html.ActionLink("Cancel and return to List", "Index", null, new { @class = "btn btn-default" })
+				</div>
+			}
+		</div>
+	</div>
+</div>

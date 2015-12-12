@@ -1,0 +1,314 @@
+﻿.wrapper {
+	width: 100%;
+	min-height: 100%;
+	height: auto !important;
+	height: 100%;
+}
+
+#header {
+	position: fixed;
+	top: 0;
+	left: 0;
+	background-color: #6394be;
+	width: 100%;
+	min-width: 900px;
+	z-index: 99999;
+	height: 54px;
+}
+
+.content {
+	margin-top: 100px;
+	padding: 0 0 100px;
+	min-height: 549px;
+	width: 85%;
+	min-width: 900px;
+	margin-left: auto;
+	margin-right: auto;
+}
+
+.footer {
+	min-width: 900px;
+	width: 100%;
+	background-color: #5bc0de;
+	clear: both;
+	position: relative;
+	z-index: 10;
+	height: 70px;
+	margin-top: -3em;
+}
+
+
+.footer-info {
+	color: white;
+	height: 70px;
+	padding: 10px;
+}
+
+
+body {
+	height: 100%;
+	background-color: #F1F1F1;
+}
+
+.field-validation-error {
+	color: #F00;
+}
+
+.field-validation-valid {
+	display: none;
+}
+
+.input-validation-error {
+	border: 1px solid #F00;
+	background-color: #FEE;
+}
+
+.validation-summary-errors {
+	font-weight: bold;
+	color: #F00;
+}
+
+	.validation-summary-errors ul {
+		margin-left: 16%;
+	}
+
+.validation-summary-valid {
+	display: none;
+}
+
+.btn a {
+	color: white;
+	text-decoration: none;
+}
+
+div .form-group {
+	max-width: 800px;
+	margin-left: auto;
+	margin-right: auto;
+}
+
+.important-button {
+	width: 130px;
+	margin-right: 20px;
+}
+
+.buttons {
+	margin-left: 100px;
+	display: inline-block;
+	margin-top: 10px;
+	margin-bottom: 10px;
+	float: left;
+}
+
+.main-header {
+	display: inline-block;
+	color: white;
+	text-align: center;
+	float: left;
+}
+
+	.main-header h1 {
+		display: block;
+		font-size: 30px;
+		margin: 0;
+		padding: 0;
+		line-height: 54px;
+		vertical-align: middle;
+	}
+
+/*** Content */
+.content-block {
+	display: inline-block;
+	width: 100%;
+	margin-bottom: 40px;
+}
+
+.post {
+	width: 13.5%;
+	display: inline-block;
+	margin-right: 2.5%;
+	float: left;
+}
+
+.post1 {
+	margin-left: 3.5%;
+}
+
+.image-style {
+	border: 1px solid #e6e6e6;
+	border-radius: 2px;
+	display: inline-block;
+}
+
+.dark {
+	opacity: 0;
+	border-radius: 2px;
+	width: 96.5%;
+	transition: opacity 0.1s ease-out;
+	display: inline-block;
+}
+
+	.dark:hover {
+		opacity: 0.5;
+	}
+
+.string1 {
+	color: rgb(2, 47, 64);
+	font-family: 'Proxima Nova', sans-serif;
+	font-size: 14px;
+	text-decoration: none;
+	display: block;
+}
+
+	.string1:hover {
+		text-decoration: underline;
+	}
+
+.string2 {
+	color: #146c88;
+	font-family: 'Titillium Web', sans-serif;
+	font-size: 12px;
+	text-decoration: none;
+	white-space: nowrap;
+	font-size: 12px;
+}
+
+	.string2:hover {
+		text-decoration: underline;
+	}
+
+.second {
+	margin-top: 50px;
+}
+
+.feedback {
+	max-width: 800px;
+}
+
+.book-image {
+	opacity: 0.7;
+	border: 1px solid rgba(0, 0, 0, 0.00);
+	display: inline-block;
+}
+
+	.book-image:hover {
+		opacity: 1;
+		border: 1px solid #146c88;
+	}
+
+.review {
+	text-align: left;
+	width: 100%;
+	padding: 10px;
+	border: 1px dotted #146c88;
+	border-radius: 3px;
+}
+
+.login-panel {
+	display: inline-block;
+	float: right;
+	margin-right: 10px;
+}
+
+	.login-panel a {
+		display: block;
+		color: white;
+		height: 20px;
+	}
+
+.admin-btn {
+	font-weight: bold;
+	color: #e01818 !important;
+}
+
+.sort-by {
+	display: block;
+	width: 100%;
+	height: 100%;
+	margin: 0;
+	padding: 5px;
+}
+	.sort-by:hover {
+		text-decoration: none;
+	}
+
+.book-block {
+	display: inline-block;
+	margin-left: 15px;
+	margin-right: 15px;
+	height: 350px;
+	float: left;
+}
+
+.light {
+	cursor: pointer;
+	opacity: 0.7;
+}
+	.light:hover {
+		opacity: 1;
+	}
+
+@media screen and (max-width: 1128px) {
+	.main-header h1 {
+		font-size: 20px;
+	}
+}
+
+@media screen and (max-width: 965px) {
+	.main-header h1 {
+		font-size: 15px;
+	}
+}
+
+div .upload {
+	margin-top: 10px;
+    width: 132px;
+    height: 36px;
+	background: url(/Content/Images/imageButton.png);
+    overflow: hidden;
+	cursor: pointer !important;
+}
+
+div .upload :hover {
+    border: 1px solid blue;
+}
+
+div .upload input {
+    display: block !important;
+    width: 132px !important;
+    height: 36px !important;
+    opacity: 0 !important;
+    overflow: hidden !important;
+	cursor: pointer !important;
+}
+
+div .upload input :hover {
+    border: 1px solid blue;
+}
+
+.mark {
+	background-color: #97a1a6;
+	padding: 3px;
+	border-radius: 3px;
+}
+
+.bookButtons {
+	margin-top: 40px;
+}
+
+.reviewPhoto {
+	display: inline-block;
+	max-width: 500px;
+}
+
+.reviewPartial {
+	display: block;
+	border-radius: 10px;
+	margin: 10px;
+	border: 1px dashed blue;
+	border-radius: 7px;
+}
+
+.reviewTable {
+	width: 100%;
+}

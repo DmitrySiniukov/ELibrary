@@ -1,0 +1,64 @@
+﻿<!DOCTYPE html>
+
+<html>
+<head>
+	<meta name="viewport" content="width=device-width" />
+	<title>
+		@ViewBag.Title
+	</title>
+	<link href="~/Content/bootstrap.css" rel="stylesheet" />
+	<link href="~/Content/bootstrap-theme.css" rel="stylesheet" />
+	<link type="text/css" rel="stylesheet" href="~/Content/Styles.css" />
+	<script type="text/javascript" src="http://ajax.googleapis.com/ajax/libs/jquery/1.10.2/jquery.js"></script>
+	<script type="text/javascript" src="http://ajax.googleapis.com/ajax/libs/jquery/1.10.2/jquery.min.js"></script>
+	<script src="~/Scripts/MainScript.js"></script>
+</head>
+<body onload="init()">
+
+	<div class="wrapper">
+
+		<header id="header">
+			<div class="buttons">
+				<a href="/Home">
+					<input class="btn btn-primary important-button" type="button" value="Home" />
+				</a>
+				<a href="/Home/Comment">
+					<input class="btn btn-primary important-button" type="button" value="Recall" />
+				</a>
+				<a href="/Home/Reviews?page=1">
+					<input class="btn btn-primary important-button" type="button" value="View reviews" />
+				</a>
+			</div>
+			<div class="main-header">
+				<h1>ELibrary - your electronic library</h1>
+			</div>
+			<div class="login-panel text-left">
+				@if (User != null && User.Identity.IsAuthenticated)
+				{
+					<a href="/Account/PersonalArea" class="btn">@string.Format("{0}...", User.Identity.Name.Substring(0, 6))</a>
+					<a href="/Account/SignOut" class="btn">Sign out</a>
+				}
+				else
+				{
+					<a href="/Account/Login" class="btn">Log in</a>
+					<a href="/Account/Register" class="btn">Sign up</a>
+				}
+			</div>
+		</header>
+
+		<main class="content">
+		 @RenderBody()
+		</main>
+	</div>
+
+	<footer class="footer text-center">
+		<div class="footer-info">
+			<h5>By Sinyukov Dmitry
+				<br />
+				<strong>Contact me: </strong>d1masinukov@gmail.com
+			</h5>
+		</div>
+	</footer>
+
+</body>
+</html>
