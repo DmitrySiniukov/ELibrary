@@ -213,6 +213,7 @@
     <Compile Include="Models\ReviewsListViewModel.cs" />
     <Compile Include="Models\Comment.cs" />
     <Compile Include="Models\User.cs" />
+    <Compile Include="Models\UsersByDate.cs" />
     <Compile Include="Models\UserStatistics.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
@@ -247,6 +248,7 @@
     <Content Include="Views\Admin\UserStatistics.cshtml" />
     <Content Include="Views\Admin\BookStatistics.cshtml" />
     <Content Include="Views\Account\UserInformation.cshtml" />
+    <Content Include="Views\Admin\UserByDate.cshtml" />
     <None Include="Web.Debug.config">
       <DependentUpon>Web.config</DependentUpon>
     </None>

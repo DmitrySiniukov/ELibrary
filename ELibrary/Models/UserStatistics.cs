@@ -62,11 +62,9 @@ namespace ELibrary.Models
 
 				foreach (var r in result)
 				{
-					using (SqlCommand cmd = new SqlCommand())
+					using (SqlCommand cmd = getMonthValues("Purchase", r.User.Id))
 					{
-						cmd.CommandText = @"select month(p.DateStamp) as MonthValue, count(*) as Purchases from Purchase p where year(p.DateStamp) = year(getdate()) and UserId = @userId group by month(p.DateStamp)";
 						cmd.Connection = connection;
-						cmd.Parameters.AddWithValue("userId", r.User.Id);
 						using (var reader = cmd.ExecuteReader())
 						{
 							while (reader.Read())
@@ -75,11 +73,9 @@ namespace ELibrary.Models
 							}
 						}
 					}
-					using (SqlCommand cmd = new SqlCommand())
+					using (SqlCommand cmd = getMonthValues("Review", r.User.Id))
 					{
-						cmd.CommandText = @"select month(r.DateStamp) as MonthValue, count(*) as Reviews from Review r where year(r.DateStamp) = year(getdate()) and UserId = @userId group by month(r.DateStamp)";
 						cmd.Connection = connection;
-						cmd.Parameters.AddWithValue("userId", r.User.Id);
 						using (var reader = cmd.ExecuteReader())
 						{
 							while (reader.Read())
@@ -94,6 +90,15 @@ namespace ELibrary.Models
 				connection.Close();
 			}
 
+			return result;
+		}
+
+		private static SqlCommand getMonthValues(string table, int userId)
+		{
+			var result = new SqlCommand();
+			result.CommandText = string.Format(@"select month(r.DateStamp) as MonthValue, count(*) from {0} r
+										where year(r.DateStamp) = year(getdate()) and UserId = @userId group by month(r.DateStamp)", table);
+			result.Parameters.AddWithValue("userId", userId);
 			return result;
 		}
 

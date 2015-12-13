@@ -105,6 +105,11 @@ namespace ELibrary.Controllers
 
 			if (ModelState.IsValid)
 			{
+				if (book.Price < 0)
+				{
+					ModelState.AddModelError("Price", "Price can't be lower than 0");
+					return View(book);
+				}
 				if (string.IsNullOrEmpty(book.Image))
 				{
 					book.Image = "http://www.clipartpal.com/_thumbs/pd/book_blue.png";

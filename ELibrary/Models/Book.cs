@@ -65,6 +65,9 @@ namespace ELibrary.Models
 		[DataType(DataType.Url)]
 		public string ContentUrl { get; set; }
 
+		[DataType(DataType.Currency)]
+		public float Price { get; set; }
+
 
 		/// <summary>
 		/// Get book by order
@@ -80,7 +83,7 @@ namespace ELibrary.Models
 				connection.Open();
 				using (SqlCommand cmd = new SqlCommand())
 				{
-					cmd.CommandText = @"select BOOK.Id, BOOK.Title, BOOK.Description, BOOK.ImageUrl, BOOK.Author, BOOK.Published, BOOK.MinAccountTypeId, BOOK.ContentUrl from BOOK where BOOK.Id = @idValue";
+					cmd.CommandText = @"select BOOK.Id, BOOK.Title, BOOK.Description, BOOK.ImageUrl, BOOK.Author, BOOK.Published, BOOK.MinAccountTypeId, BOOK.ContentUrl, BOOK.Price from BOOK where BOOK.Id = @idValue";
 					cmd.Parameters.AddWithValue("idValue", id);
 					cmd.Connection = connection;
 					using (var reader = cmd.ExecuteReader())
@@ -97,7 +100,8 @@ namespace ELibrary.Models
 								Author = reader.GetString(4),
 								Published = reader.GetBoolean(5),
 								MinAccountType = (BookAccountType)reader.GetInt32(6),
-								ContentUrl = reader.GetString(7)
+								ContentUrl = reader.GetString(7),
+								Price = (float)reader.GetDouble(8)
 							};
 						}
 					}
@@ -121,7 +125,7 @@ namespace ELibrary.Models
 					connection.Open();
 					using (SqlCommand cmd = new SqlCommand())
 					{
-						cmd.CommandText = string.Format(@"select BOOK.Id, BOOK.Title, BOOK.Description, BOOK.ImageUrl, BOOK.Author, BOOK.Published, BOOK.MinAccountTypeId, BOOK.ContentUrl from BOOK order by BOOK.{0} {1}",
+						cmd.CommandText = string.Format(@"select BOOK.Id, BOOK.Title, BOOK.Description, BOOK.ImageUrl, BOOK.Author, BOOK.Published, BOOK.MinAccountTypeId, BOOK.ContentUrl, BOOK.Price from BOOK order by BOOK.{0} {1}",
 							string.IsNullOrEmpty(orderBy) ? "Id" : orderBy, desc ? "desc" : "asc");
 						cmd.Connection = connection;
 						var reader = cmd.ExecuteReader();
@@ -138,7 +142,8 @@ namespace ELibrary.Models
 									Author = reader.GetString(4),
 									Published = reader.GetBoolean(5),
 									MinAccountType = (BookAccountType)reader.GetInt32(6),
-									ContentUrl = reader.GetString(7)
+									ContentUrl = reader.GetString(7),
+									Price = (float)reader.GetDouble(8)
 								});
 							}
 							catch (Exception)
@@ -161,7 +166,7 @@ namespace ELibrary.Models
 				connection.Open();
 				using (SqlCommand cmd = new SqlCommand())
 				{
-					cmd.CommandText = string.Format(@"select BOOK.Id, BOOK.Title, BOOK.Description, BOOK.ImageUrl, BOOK.Author, BOOK.Published, BOOK.MinAccountTypeId, BOOK.ContentUrl from BOOK where BOOK.PUBLISHED = 'True' order by Id");
+					cmd.CommandText = string.Format(@"select BOOK.Id, BOOK.Title, BOOK.Description, BOOK.ImageUrl, BOOK.Author, BOOK.Published, BOOK.MinAccountTypeId, BOOK.ContentUrl, BOOK.Price from BOOK where BOOK.PUBLISHED = 'True' order by Id");
 					cmd.Connection = connection;
 					var reader = cmd.ExecuteReader();
 					while (reader.Read())
@@ -175,7 +180,8 @@ namespace ELibrary.Models
 							Author = reader.GetString(4),
 							Published = reader.GetBoolean(5),
 							MinAccountType = (BookAccountType)reader.GetInt32(6),
-							ContentUrl = reader.GetString(7)
+							ContentUrl = reader.GetString(7),
+							Price = (float)reader.GetDouble(8)
 						});
 					}
 				}
@@ -198,7 +204,7 @@ namespace ELibrary.Models
 					connection.Open();
 					using (SqlCommand cmd = new SqlCommand())
 					{
-						cmd.CommandText = @"update BOOK set BOOK.Title = @title, BOOK.Description = @description, BOOK.ImageUrl = @imageUrl, BOOK.Author = @author, BOOK.Published = @published, BOOK.MinAccountTypeId = @minAcc, BOOK.ContentUrl = @content where BOOK.Id = @idValue";
+						cmd.CommandText = @"update BOOK set BOOK.Title = @title, BOOK.Description = @description, BOOK.ImageUrl = @imageUrl, BOOK.Author = @author, BOOK.Published = @published, BOOK.MinAccountTypeId = @minAcc, BOOK.ContentUrl = @content, BOOK.Price = @price where BOOK.Id = @idValue";
 						cmd.Connection = connection;
 						cmd.Parameters.AddWithValue("title", newItem.Title);
 						cmd.Parameters.AddWithValue("description", newItem.Description);
@@ -208,6 +214,7 @@ namespace ELibrary.Models
 						cmd.Parameters.AddWithValue("published", newItem.Published);
 						cmd.Parameters.AddWithValue("minAcc", (int)newItem.MinAccountType);
 						cmd.Parameters.AddWithValue("content", newItem.ContentUrl);
+						cmd.Parameters.AddWithValue("price", newItem.Price);
 						cmd.ExecuteNonQuery();
 					}
 					connection.Close();
@@ -228,7 +235,7 @@ namespace ELibrary.Models
 					connection.Open();
 					using (SqlCommand cmd = new SqlCommand())
 					{
-						cmd.CommandText = @"insert BOOK (Title, Description, ImageUrl, Author, Published, MinAccountTypeId, ContentUrl) values (@title, @description, @imageUrl, @author, @published, @minAcc, @content)";
+						cmd.CommandText = @"insert BOOK (Title, Description, ImageUrl, Author, Published, MinAccountTypeId, ContentUrl, Price) values (@title, @description, @imageUrl, @author, @published, @minAcc, @content, @price)";
 						cmd.Connection = connection;
 						cmd.Parameters.AddWithValue("title", item.Title);
 						cmd.Parameters.AddWithValue("description", item.Description);
@@ -237,6 +244,7 @@ namespace ELibrary.Models
 						cmd.Parameters.AddWithValue("published", item.Published);
 						cmd.Parameters.AddWithValue("minAcc", (int)item.MinAccountType);
 						cmd.Parameters.AddWithValue("content", item.ContentUrl);
+						cmd.Parameters.AddWithValue("price", item.Price);
 						cmd.ExecuteNonQuery();
 					}
 					connection.Close();

@@ -170,12 +170,13 @@ namespace ELibrary.Controllers
 					using (SqlCommand cmd = new SqlCommand())
 					{
 						cmd.CommandText = string.Format(
-						@"select top(@top2) ID, TEXT, DATESTAMP, MARK, ADMINREPLY, USERID
-						from
-							(select top(@top1) COMMENT.*
-							from COMMENT
-							order by DATESTAMP desc) as T
-						order by DATESTAMP");
+						@"select * from (
+							select top(@top2) ID, TEXT, DATESTAMP, MARK, ADMINREPLY, USERID
+							from
+								(select top(@top1) COMMENT.*
+								from COMMENT
+								order by DATESTAMP desc) as T
+						order by DATESTAMP) Res order by DATESTAMP DESC");
 						cmd.Parameters.AddWithValue("top1", page * rowsPerPage);
 						cmd.Parameters.AddWithValue("top2", lastRows);
 						cmd.Connection = connection;
